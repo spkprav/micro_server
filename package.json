@@ -1,20 +1,10 @@
 {
-  "name": "some",
-  "version": "0.0.0",
-  "description": "",
-  "homepage": "",
-  "author": {
-    "name": "Praveen Kumar S.",
-    "email": "spkprav@gmail.com",
-    "url": ""
+  "name": "application-name",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
-  "files": [
-    "lib"
-  ],
-  "main": "lib/index.js",
-  "keywords": [
-    ""
-  ],
   "devDependencies": {
     "coveralls": "^2.12.0",
     "nsp": "^2.6.3",
@@ -35,9 +25,12 @@
       "node": true
     }
   },
-  "repository": "spkprav/some",
   "jest": {
     "testEnvironment": "node"
   },
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.15.2",
+    "bluebird": "^3.5.0"
+  }
 }
