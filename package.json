@@ -19,12 +19,14 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "coveralls": "^2.12.0",
-    "nsp": "^2.6.3",
     "eslint": "^3.18.0",
     "eslint-config-xo-space": "^0.16.0",
     "jest": "^19.0.2",
-    "jest-cli": "^19.0.1"
+    "jest-cli": "^19.0.1",
+    "nsp": "^2.6.3"
   },
   "dependencies": {
     "express": "^4.15.2",
