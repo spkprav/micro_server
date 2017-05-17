@@ -1,15 +1,19 @@
 import express from 'express';
 import view from './view';
-import permittedParams from './permittedParams';
-import s3 from '../../lib/s3';
+import Params from '../../lib/params';
+import S3 from '../../lib/s3';
 
 /* eslint-disable new-cap */
-const router = express.Router();
+const router = express.Router;
+const params = new Params();
 /* eslint-enable */
+
+let s3 = new S3();
 
 // POST create
 router.post('/', (req, res) => {
-  s3.download(permittedParams.create(req.body))
+  let fileParams = params.permit(req.body, ['filename']);
+  s3.download(fileParams)
     .then(view.show)
     .then(res.send.bind(res))
     .catch(res.send.bind(res));
