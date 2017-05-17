@@ -1,3 +1,4 @@
+require('dotenv').config();
 import express from 'express';
 import workflowsRoute from './controllers/workflows';
 import bodyParser from 'body-parser';
